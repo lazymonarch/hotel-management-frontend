@@ -1,0 +1,123 @@
+.admin-dashboard {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.admin-header {
+    margin-bottom: 2rem;
+}
+
+.admin-header h1 {
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.tab-navigation {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab-navigation button {
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--primary-color);
+    background: none;
+    color: var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-navigation button.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.admin-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.data-table th,
+.data-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.data-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.add-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.error-message,
+.success-message {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.error-message {
+    background-color: #fff3f3;
+    color: var(--error-color);
+    border: 1px solid #ffebeb;
+}
+
+.success-message {
+    background-color: #f0fff4;
+    color: var(--success-color);
+    border: 1px solid #dcffe4;
+}
+
+.data-table button {
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border: 1px solid var(--primary-color);
+    background: none;
+    color: var(--primary-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.data-table button:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+.data-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+.data-table td {
+    vertical-align: middle;
+} 

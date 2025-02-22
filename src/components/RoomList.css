@@ -1,0 +1,131 @@
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.room-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.room-header {
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.room-header h3 {
+    margin: 0;
+    color: var(--text-dark);
+    font-size: 1.25rem;
+}
+
+.room-status {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.room-status.available {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.room-status.booked {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.room-details {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.room-number {
+    color: var(--text-medium);
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+}
+
+.room-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0 0 1.5rem;
+}
+
+.room-price span {
+    font-size: 1rem;
+    color: var(--text-medium);
+    font-weight: normal;
+}
+
+.amenities {
+    margin-bottom: 1.5rem;
+}
+
+.amenities h4 {
+    margin: 0 0 0.5rem;
+    color: var(--text-dark);
+}
+
+.amenities ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.5rem;
+}
+
+.amenities li {
+    color: var(--text-medium);
+    font-size: 0.9rem;
+    padding: 0.25rem 0;
+}
+
+.room-description {
+    color: var(--text-medium);
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.book-button {
+    margin: 0 1.5rem 1.5rem;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.book-button:hover {
+    background-color: var(--primary-dark);
+}
+
+.no-rooms {
+    text-align: center;
+    color: var(--text-medium);
+    grid-column: 1 / -1;
+    padding: 2rem;
+} 

@@ -1,0 +1,72 @@
+:root {
+    --primary-color: #007bff;
+    --primary-dark: #0056b3;
+    --text-dark: #333;
+    --text-medium: #555;
+    --text-light: #777;
+    --background: #f8f9fa;
+    --white: #fff;
+    --spacing-small: 10px;
+    --spacing-medium: 15px;
+    --spacing-large: 20px;
+    --spacing-xl: 30px;
+}
+
+body {
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--spacing-large);
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    border-radius: 8px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.home-container h1 {
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.home-container p {
+    color: var(--text-medium);
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.home-container a {
+    text-decoration: none;
+}
+
+.home-container a:hover {
+    text-decoration: none;
+}
+
+.home-container .available-rooms {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.home-container .available-rooms h2 {
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.home-container .available-rooms p {
+    color: var(--text-light);
+}
+

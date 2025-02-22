@@ -1,0 +1,131 @@
+:root {
+    --primary-color: #007bff;
+    --primary-dark: #0056b3;
+    --text-dark: #333;
+    --text-medium: #555;
+    --background: #f9f9f9;
+    --white: #fff;
+    --error-color: #dc3545;
+    --success-color: #28a745;
+    --border-color: #dee2e6;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.dashboard-header {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+    color: var(--text-dark);
+    margin: 0;
+    font-size: 2rem;
+}
+
+.dashboard-header p {
+    color: var(--text-medium);
+    margin: 0.5rem 0 0;
+}
+
+.order-history-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.order-history-link:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.message {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.error-message {
+    background-color: #fff3f3;
+    color: var(--error-color);
+    border: 1px solid #ffebeb;
+}
+
+.success-message {
+    background-color: #f0fff4;
+    color: var(--success-color);
+    border: 1px solid #dcffe4;
+}
+
+.order-summary {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.order-summary h3 {
+    color: var(--text-dark);
+    margin-top: 0;
+}
+
+.order-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.order-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-total {
+    font-weight: bold;
+    margin: 1rem 0;
+    padding-top: 1rem;
+    border-top: 2px solid var(--border-color);
+}
+
+.place-order-button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.place-order-button:hover:not(:disabled) {
+    background-color: var(--primary-dark);
+}
+
+.place-order-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.dashboard-section {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
