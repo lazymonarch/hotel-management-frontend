@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './OrderHistoryPage.css';
+import '../styles/OrderHistoryPage.css';
 
 function OrderHistoryPage({ jwtToken }) {
   const [orders, setOrders] = useState([]);

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './AddRoomModal.css';
+import '../styles/AddRoomModal.css';
 
 const ROOM_TYPES = {
     SINGLE: {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './MenuController.css'; // Import the CSS file
+import '../styles/MenuController.css'; // Import the CSS file
 
 function MenuController() {
     const [isOpen, setIsOpen] = useState(false);

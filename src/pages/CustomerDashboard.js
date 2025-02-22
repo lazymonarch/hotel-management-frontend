@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import RoomList from '../components/RoomList';
 import BookingForm from '../components/BookingForm';
 import FoodMenuList from '../components/FoodMenuList';
-import './CustomerDashboard.css';
+import '../styles/CustomerDashboard.css';
 
 function CustomerDashboard({ jwtToken }) {
   const [rooms, setRooms] = useState([]);

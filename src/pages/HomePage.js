@@ -1,5 +1,5 @@
 import React from 'react';
-import './HomePage.css'; // Import the CSS file
+import '../styles/HomePage.css'; // Import the CSS file
 import MenuController from '../components/MenuController';
 
 function HomePage() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './RoomList.css';
+import '../styles/RoomList.css';
 
 function RoomList({ rooms, onBookNow }) {
     return (
