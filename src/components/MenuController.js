@@ -15,6 +15,16 @@ function MenuController() {
         setIsOpen(false);
     };
 
+    const handleAdminClick = () => {
+        navigate('/signup', { state: { role: 'admin' } });
+        setIsOpen(false);
+    };
+
+    const handleCustomerClick = () => {
+        navigate('/signup', { state: { role: 'customer' } });
+        setIsOpen(false);
+    };
+
     return (
         <div>
             <button onClick={toggleMenu} className="menu-button">☰</button>
@@ -29,8 +39,8 @@ function MenuController() {
                             <li><button onClick={() => navigateTo('/contact')}>Contact Us</button></li>
                         </ul>
                         <div className="auth-buttons">
-                            <button className="auth-button" onClick={() => navigateTo('/login')}>Login</button>
-                            <button className="auth-button" onClick={() => navigateTo('/signup')}>Sign Up</button>
+                            <button className="auth-button" onClick={handleAdminClick}>Admin</button>
+                            <button className="auth-button" onClick={handleCustomerClick}>Customer</button>
                         </div>
                     </div>
                 </div>

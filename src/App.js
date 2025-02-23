@@ -6,7 +6,6 @@ import SignupPage from './pages/SignupPage';
 import AdminDashboard from './pages/AdminDashboard';
 import CustomerDashboard from './pages/CustomerDashboard';
 import OrderHistoryPage from './pages/OrderHistoryPage';
-import RoleSelectionPage from './pages/RoleSelectionPage';
 import Navigation from './components/Navigation';
 import AuthContext, { AuthProvider } from './context/AuthContext';
 import './App.css';
@@ -20,10 +19,9 @@ function App() {
                 <Navigation isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
                 
                 <Routes>
-                    <Route path="/" element={<RoleSelectionPage />} />
+                    <Route path="/" element={<HomePage />} />
                     <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
                     <Route path="/signup" element={<SignupPage />} />
-                    <Route path="/home" element={<HomePage />} />
 
                     <Route
                         path="/admin-dashboard"
