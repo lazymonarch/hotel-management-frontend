@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/SignupPage.css';
 
 function SignupPage() {
@@ -9,6 +9,13 @@ function SignupPage() {
     const [role, setRole] = useState('customer'); // Default to customer
     const [error, setError] = useState('');
     const navigate = useNavigate();
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.state?.role) {
+            setRole(location.state.role);
+        }
+    }, [location.state]);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
