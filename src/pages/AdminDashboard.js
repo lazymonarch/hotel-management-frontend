@@ -347,7 +347,7 @@ function AdminDashboard({ jwtToken }) {
                                 {orders.map(order => (
                                     <tr key={order._id}>
                                         <td>{order._id}</td>
-                                        <td>{order.customerName}</td>
+                                        <td>{order.customer.username}</td> {/* Display customer username */}
                                         <td>{order.orderType}</td>
                                         <td>₹{order.totalAmount}</td>
                                         <td>{order.status}</td>

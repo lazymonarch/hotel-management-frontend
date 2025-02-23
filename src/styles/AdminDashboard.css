@@ -84,7 +84,7 @@
 .data-table td {
     border: 1px solid #ddd;
     padding: 0.8rem;
-    text-align: left;
+    text-align: center;
 }
 
 .data-table th {
