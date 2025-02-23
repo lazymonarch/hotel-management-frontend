@@ -24,8 +24,8 @@ function MenuController() {
                         <ul>
                             <li><button onClick={() => navigateTo('/')}>Home</button></li>
                             <li><button onClick={() => navigateTo('/about')}>About</button></li>
-                            <li><button onClick={() => navigateTo('/stay')}>Stay</button></li>
-                            <li><button onClick={() => navigateTo('/dining')}>Dining</button></li>
+                            <li><button onClick={() => navigateTo('/customer-dashboard')}>Stay</button></li> {/* Navigate to Customer Dashboard */}
+                            <li><button onClick={() => navigateTo('/customer-dashboard')}>Dining</button></li> {/* Navigate to Customer Dashboard */}
                             <li><button onClick={() => navigateTo('/contact')}>Contact Us</button></li>
                         </ul>
                         <div className="auth-buttons">
