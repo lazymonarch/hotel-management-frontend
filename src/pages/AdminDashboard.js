@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../styles/AdminDashboard.css';
 import AddRoomModal from '../components/AddRoomModal';
+import AddFoodItemModal from '../components/AddFoodItemModal';
 
 function AdminDashboard({ jwtToken }) {
     const [activeTab, setActiveTab] = useState('rooms');
@@ -12,6 +13,7 @@ function AdminDashboard({ jwtToken }) {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
     const [isAddRoomModalOpen, setIsAddRoomModalOpen] = useState(false);
+    const [isAddFoodItemModalOpen, setIsAddFoodItemModalOpen] = useState(false);
     const apiBaseURL = process.env.REACT_APP_API_BASE_URL;
 
     // Clear messages when switching tabs
@@ -234,7 +236,7 @@ function AdminDashboard({ jwtToken }) {
                                     <tr key={room._id}>
                                         <td>{room.roomNumber}</td>
                                         <td>{room.type}</td>
-                                        <td>${room.price}</td>
+                                        <td>₹{room.price}</td>
                                         <td>{room.booked ? 'Booked' : 'Available'}</td>
                                         <td>
                                             <button onClick={() => {/* Open edit modal */}}>Edit</button>
@@ -250,9 +252,17 @@ function AdminDashboard({ jwtToken }) {
                 {activeTab === 'food' && (
                     <div className="food-section">
                         <h2>Food Menu Management</h2>
-                        <button className="add-button" onClick={() => {/* Open add food modal */}}>
+                        <button 
+                            className="add-button" 
+                            onClick={() => setIsAddFoodItemModalOpen(true)}
+                        >
                             Add New Item
                         </button>
+                        <AddFoodItemModal 
+                            isOpen={isAddFoodItemModalOpen}
+                            onClose={() => setIsAddFoodItemModalOpen(false)}
+                            onSave={handleAddFoodItem}
+                        />
                         <table className="data-table">
                             <thead>
                                 <tr>
@@ -267,7 +277,7 @@ function AdminDashboard({ jwtToken }) {
                                     <tr key={item._id}>
                                         <td>{item.name}</td>
                                         <td>{item.category}</td>
-                                        <td>${item.price}</td>
+                                        <td>₹{item.price}</td>
                                         <td>
                                             <button onClick={() => {/* Open edit modal */}}>Edit</button>
                                             <button onClick={() => handleDeleteFoodItem(item._id)}>Delete</button>
@@ -339,7 +349,7 @@ function AdminDashboard({ jwtToken }) {
                                         <td>{order._id}</td>
                                         <td>{order.customerName}</td>
                                         <td>{order.orderType}</td>
-                                        <td>${order.totalAmount}</td>
+                                        <td>₹{order.totalAmount}</td>
                                         <td>{order.status}</td>
                                     </tr>
                                 ))}

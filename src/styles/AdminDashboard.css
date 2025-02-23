@@ -1,44 +1,77 @@
 .admin-dashboard {
     padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 2rem;
 }
 
 .admin-header h1 {
-    color: var(--text-dark);
-    margin-bottom: 1rem;
+    margin: 0;
 }
 
 .tab-navigation {
     display: flex;
     gap: 1rem;
-    margin-bottom: 2rem;
 }
 
 .tab-navigation button {
     padding: 0.8rem 1.5rem;
-    border: 1px solid var(--primary-color);
-    background: none;
-    color: var(--primary-color);
     border-radius: 4px;
     cursor: pointer;
+    font-size: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
     transition: all 0.3s ease;
 }
 
 .tab-navigation button.active {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: #555;
+}
+
+.tab-navigation button:hover {
+    opacity: 0.9;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 1rem;
+}
+
+.success-message {
+    color: green;
+    margin-bottom: 1rem;
 }
 
 .admin-content {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.rooms-section,
+.food-section,
+.users-section,
+.orders-section {
+    margin-top: 2rem;
+}
+
+.add-button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.add-button:hover {
+    opacity: 0.9;
 }
 
 .data-table {
@@ -49,75 +82,42 @@
 
 .data-table th,
 .data-table td {
-    padding: 1rem;
+    border: 1px solid #ddd;
+    padding: 0.8rem;
     text-align: left;
-    border-bottom: 1px solid var(--border-color);
 }
 
 .data-table th {
-    background-color: #f8f9fa;
-    font-weight: 600;
+    background-color: #f4f4f4;
 }
 
-.add-button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-bottom: 1rem;
+.data-table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-.error-message,
-.success-message {
-    padding: 1rem;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-}
-
-.error-message {
-    background-color: #fff3f3;
-    color: var(--error-color);
-    border: 1px solid #ffebeb;
-}
-
-.success-message {
-    background-color: #f0fff4;
-    color: var(--success-color);
-    border: 1px solid #dcffe4;
+.data-table tr:hover {
+    background-color: #f1f1f1;
 }
 
 .data-table button {
     padding: 0.5rem 1rem;
-    margin-right: 0.5rem;
-    border: 1px solid var(--primary-color);
-    background: none;
-    color: var(--primary-color);
     border-radius: 4px;
     cursor: pointer;
+    font-size: 0.9rem;
+    background-color: #333;
+    color: white;
+    border: none;
     transition: all 0.3s ease;
 }
 
 .data-table button:hover {
-    background-color: var(--primary-color);
-    color: white;
+    opacity: 0.9;
 }
 
 .delete-button {
-    background-color: #dc3545;
-    color: white;
-    border: none;
+    background-color: red;
 }
 
 .delete-button:hover {
-    background-color: #c82333;
+    opacity: 0.8;
 }
-
-.data-table tr:hover {
-    background-color: #f8f9fa;
-}
-
-.data-table td {
-    vertical-align: middle;
-} 
