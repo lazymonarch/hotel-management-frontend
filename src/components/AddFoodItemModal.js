@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './AddFoodItemModal.css';
+import '../styles/AddFoodItemModal.css';
 
 function AddFoodItemModal({ isOpen, onClose, onSave }) {
     const [name, setName] = useState('');
