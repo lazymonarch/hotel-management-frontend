@@ -6,7 +6,7 @@ import SignupPage from './pages/SignupPage';
 import AdminDashboard from './pages/AdminDashboard';
 import CustomerDashboard from './pages/CustomerDashboard';
 import OrderHistoryPage from './pages/OrderHistoryPage';
-import '../styles/App.css';
+import './App.css';
 
 // Create a separate Navigation component
 function Navigation({ isLoggedIn, handleLogout }) {
