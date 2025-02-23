@@ -15,26 +15,18 @@ function LoginPage({ onLogin }) {
 
         try {
             const apiBaseURL = process.env.REACT_APP_API_BASE_URL;
-            const response = await axios.post(`${apiBaseURL}/api/auth/login`, {
-                username,
-                password,
-            });
+            const response = await axios.post(`${apiBaseURL}/api/auth/login`, { username, password });
+            const { token, user } = response.data;
 
-            if (response.status === 200) {
-                const { token, role } = response.data;
-                onLogin(token, role);
+            onLogin(token, user.role);
 
-                if (role === 'admin') {
-                    navigate('/admin-dashboard');
-                } else if (role === 'customer') {
-                    navigate('/home');
-                }
+            if (user.role === 'admin') {
+                navigate('/admin-dashboard');
             } else {
-                setError('Login failed');
-                setTimeout(() => setError(''), 3000);
+                navigate('/customer-dashboard');
             }
         } catch (error) {
-            setError('Login failed. Please check your credentials.');
+            setError('Invalid username or password');
             setTimeout(() => setError(''), 3000);
         }
     };
@@ -42,7 +34,8 @@ function LoginPage({ onLogin }) {
     return (
         <div className="auth-container">
             <div className="auth-card">
-                <h1>Login</h1>
+                <h1>Welcome Back</h1>
+                <p className="auth-subtitle">Please login to your account</p>
                 {error && <div className="error-message">{error}</div>}
                 <form onSubmit={handleSubmit} className="auth-form">
                     <div className="form-group">
