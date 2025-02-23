@@ -150,13 +150,13 @@ function CustomerDashboard({ jwtToken }) {
                 return item ? (
                   <li key={itemId}>
                     <span>{item.name}</span>
-                    <span>${item.price}</span>
+                    <span>₹{item.price}</span> {/* Display price in rupees */}
                   </li>
                 ) : null;
               })}
             </ul>
             <div className="order-total">
-              Total: ${calculateTotal()}
+              Total: ₹{calculateTotal()} {/* Display total in rupees */}
             </div>
             <button
               className="place-order-button"
